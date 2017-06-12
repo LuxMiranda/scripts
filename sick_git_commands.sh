@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo -e "\e[31mgit log \e[0m// commit history"
+echo -e "\e[31mgit log \e[0m--pretty=oneline \e[0m// just do it"
+echo -e "\e[31mgit log \e[35m-p -<number> \e[0m// number of things to display"
+echo -e "\e[31mgit log \e[35m--since=2.days\e[0m"
+echo -e "\e[31mgit log \e[35m-S function_name\e[0m"
+echo -e "\e[31mgit log \e[35m--author=<author name>\e[0m"
+echo -e "\e[31mgit log \e[35m--oneline --decorate\e[0m // shows where branch pointers are pointing"
+echo -e "\e[31mgit commit \e[35m--amend \e[0m// for when you just forgot to do that one thing"
+echo -e "\e[31mgit reset HEAD \e[35m<file> \e[0m// ... you should know this one"
+echo -e "\e[31mgit checkout \e[35m<file> \e[0m// ... and this one"
+echo -e "\e[31mgit remote \e[0m// look at the remote branch name(s)"
+echo -e "\e[31mgit remote \e[35m-v \e[0m// look at the remote branch url(s)"
+echo -e "\e[31mgit remote add \e[35m<name> <url> \e[0m// because syntax is hard"
+echo -e "\e[31mgit push \e[35m<remote> <branch>\e[0m// ... and this one"
+echo -e "\e[31mgit remote show \e[35m<branch>\e[0m// give me the details"
+echo -e "\e[31mgit remote rename \e[35m<branch>\e[0m// rename the branch"
+echo -e "\e[31mgit tag\e[0m // list tags"
+echo -e "\e[31mgit tag \e[35m-l \"string\" \e[0m// search tags"
+echo -e "\e[31mgit tag \e[35m-a <tag_name> -m \"message\" \e[0m// create annotated tag (full git object)"
+echo -e "\e[31mgit tag \e[35m <tag_name> \e[0m// create lightweight tag (just pointer)"
+echo -e "\e[31mgit tag \e[35m -a <tag_name> <commit_hash (e.g. 9fceb02)>\e[0m// tag past commit"
+echo -e "\e[31mgit config\e[35m--global alias.<alias_shortcut> command\e[0m // create a git alias (e.g. git config --global alias.unstage 'reset HEAD --')"
+
+exit
