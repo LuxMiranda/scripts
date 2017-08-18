@@ -4,8 +4,16 @@
 # Original author: Dave Browning
 # Modifications by Jack Kiefer
 
+month=$(date | cut -d' ' -f2)
+day=$(date | cut -d' ' -f3)
+
+curDate="$month $day"
+
+echo "It is $curDate"
+
 # Get the time the machine booted this morning
-arrivalTime=$(last -w $USER | grep :0 | grep no\ logout | tr -s ' ' | cut -d' ' -f7)
+arrivalTime=$(last -w $USER | grep "$curDate" | tail -n1 | tr -s ' ' | cut -d' ' -f7)
+
 
 TIME1="$arrivalTime:00"
 
@@ -20,7 +28,7 @@ SEC2=`date +%s -d ${TIME2}`
 # Use expr to do the math, let's say TIME1 was the start and TIME2 was the finish
 DIFFSEC=`expr ${SEC2} - ${SEC1}`
 
-echo You booted your machine at ${TIME1}
+echo The first recorded login today was at ${TIME1}
 echo It is currently ${TIME2}
 
 # And use date to convert the seconds back to something more meaningful
