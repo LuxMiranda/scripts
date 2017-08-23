@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # A lightweight tool for telling you how long you've been at work
-# Original author: Dave Browning
-# Modifications by Jack Kiefer
+# Authored by David Browning and Jack Kiefer
 
 month=$(date | cut -d' ' -f2)
 day=$(date | cut -d' ' -f3)
@@ -10,6 +9,7 @@ day=$(date | cut -d' ' -f3)
 curDate="$month $day"
 
 echo "It is $curDate"
+echo ""
 
 # Get the time the machine booted this morning
 arrivalTime=$(last -w $USER | grep "$curDate" | tail -n1 | tr -s ' ' | cut -d' ' -f7)
@@ -41,6 +41,32 @@ m=$(echo $elapsed | cut -d':' -f 2)
 s=$(echo $elapsed | cut -d':' -f 3)
 
 echo It has been $h hours, $m minutes, and $s seconds
+
+if ! [ -z "$1" ]
+  then
+    TOSECDEC=$(echo "${1} * 3600" | bc)
+    TOSEC=$(echo $TOSECDEC | cut -f1 -d".")
+    LEAVESEC=`expr ${SEC1} + ${TOSEC}`
+
+    if [ $SEC2 -gt $LEAVESEC ]
+      then
+        echo ""
+        echo "You have already met your goal of $1 hours!!"
+        exit
+    fi
+
+    SECTOGO=`expr ${LEAVESEC} - ${SEC2}`
+    togo=$(date +%H:%M:%S -ud @${SECTOGO})
+
+    th=$(echo $togo | cut -d':' -f 1)
+    tm=$(echo $togo | cut -d':' -f 2)
+    ts=$(echo $togo | cut -d':' -f 3)
+
+    echo ""
+    echo To reach your target of $1 hours you have
+    echo $th hours, $tm minutes, and $ts seconds to go
+
+fi
 
 exit
 
