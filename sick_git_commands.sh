@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "\e[31mgit log \e[0m// commit history"
 echo -e "\e[31mgit log \e[0m--pretty=oneline \e[0m// just do it"

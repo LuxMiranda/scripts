@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # A lightweight tool for telling you how long you've been at work
 # Authored by David Browning and Jack Kiefer

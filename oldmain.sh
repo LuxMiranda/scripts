@@ -1,7 +1,7 @@
 # Turns your wallpaper into a live-STREAM of USU's Old Main.
 # Requires VLC.
 
-#!/bin/bash
+#!/usr/bin/env bash
 
 NC='\033[0m' # No Color
 GREEN='\033[0;32m'

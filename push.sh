@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 function get_branch() {
   git branch --no-color | grep -E '^\*' | awk '{print $2}' \
     || echo "default_value"
