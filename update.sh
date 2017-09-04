@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 if hash pacman 2>/dev/null; then
   sudo pacman -Syyu
