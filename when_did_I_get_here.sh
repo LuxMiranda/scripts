@@ -3,8 +3,8 @@
 # A lightweight tool for telling you how long you've been at work
 # Authored by David Browning and Jack Kiefer
 
-month=$(date | cut -d' ' -f2)
-day=$(date | cut -d' ' -f3)
+month=$(date | tr -s ' ' | cut -d' ' -f2)
+day=$(date | tr -s ' ' | cut -d' ' -f3)
 
 curDate="$month $day"
 
@@ -12,7 +12,7 @@ echo "It is $curDate"
 echo ""
 
 # Get the time the machine booted this morning
-arrivalTime=$(last -w $USER | grep "$curDate" | tail -n1 | tr -s ' ' | cut -d' ' -f7)
+arrivalTime=$(last -w $USER | tr -s ' ' | grep "$curDate" | tail -n1 | tr -s ' ' | cut -d' ' -f7)
 
 
 TIME1="$arrivalTime:00"
