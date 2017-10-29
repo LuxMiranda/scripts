@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 if hash pacman 2>/dev/null; then
   sudo pacman -Syyu
   sudo pacman-optimize && sync
