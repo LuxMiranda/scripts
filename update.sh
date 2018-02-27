@@ -3,11 +3,13 @@
 set -e
 
 if hash pacaur 2>/dev/null; then
+  echo "pacaur -Syu"
   pacaur -Syu
   exit
 fi
 
 if hash pacman 2>/dev/null; then
+  echo "pacman -Syyu && pacman-optimize && sync"
   sudo pacman -Syyu
   sudo pacman-optimize && sync
   exit
