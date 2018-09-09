@@ -9,6 +9,7 @@
 | `oldmain.sh` | Have a live feed from a webcam at USU be your desktop background |
 | `pairityQuickSync.sh` | Forces quicker network syncing with the Parity Ethereum client |
 | `pan.sh` | Conveniently shove whatever arguments you want into a Pandoc conversion |
+| `peek.sh` | Generate a list of packages that have updates with apt (without actually updating them) |
 | `push.sh` | Little script to push a commit to the current git branch |
 | `sick_git_commands.sh` | Print a list of sick git commands for quick reference |
 | `update.sh` | Whether you use `apt` or `pacman` to manage your packages, this script will update your system! | 
