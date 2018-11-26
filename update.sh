@@ -9,9 +9,9 @@ if hash pacaur 2>/dev/null; then
 fi
 
 if hash pacman 2>/dev/null; then
-  echo "pacman -Syyu && pacman-optimize && sync"
+  echo "pacman -Syyu && sync"
   sudo pacman -Syyu
-  sudo pacman-optimize && sync
+  sudo sync
   exit
 fi
 
