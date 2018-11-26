@@ -2,6 +2,7 @@
 
 if [ $# -eq 0 ]; then
   echo "Error: no file specified"
+  exit 1
 fi
 
 file=$1
