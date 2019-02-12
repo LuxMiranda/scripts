@@ -2,7 +2,8 @@
 
 | Script | Description  |
 |--------|--------------|
-| `clock.sh` | puts a cool clock in the top right corner of your termial |
+| `clock.sh` | puts a cool clock in the top right corner of your terminal |
+| `colors.sh` | a reference and test script for adding colored output to your scripts |
 | `dateOrdinal.sh` | Prints today's date with a proper ordinal on the day number. E.g., "21st of September", "15th of March" |
 | `git_ssh_key_gen.sh` | Sets up ssh keys to be used with GitHub or your choice of external repository host of choice |
 | `kitchen_timer.sh` | Set a timer (in seconds).|
