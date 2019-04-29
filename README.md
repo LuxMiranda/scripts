@@ -2,6 +2,7 @@
 
 | Script | Description  |
 |--------|--------------|
+| `caps_escape.sh` | remaps your caps lock key to be an additional escape key |
 | `clock.sh` | puts a cool clock in the top right corner of your terminal |
 | `colors.sh` | a reference and test script for adding colored output to your scripts |
 | `dateOrdinal.sh` | Prints today's date with a proper ordinal on the day number. E.g., "21st of September", "15th of March" |
