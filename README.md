@@ -13,6 +13,7 @@
 | `pairityQuickSync.sh` | Forces quicker network syncing with the Parity Ethereum client |
 | `peek.sh` | Generate a list of packages that have updates with apt (without actually updating them) |
 | `push.sh` | Little script to push a commit to the current git branch |
+| `screenclip.sh` | Use the `scrot` screenshot utility to select a region of the screen and copy it to the clipboard with `xclip` |
 | `sick_git_commands.sh` | Print a list of sick git commands for quick reference |
 | `update_pacman_mirrors.sh` | update and rank pacman mirrors |
 | `update.sh` | Whether you use `apt` or `pacman` to manage your packages, this script will update your system! |
